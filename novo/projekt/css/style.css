@@ -1,0 +1,668 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Luxurious+Roman&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Saira+Semi+Condensed&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+
+/*********             INDEX STRANICA     *********/
+
+
+/* lagan nacin da popunim rubove kod navbara i ostalih stvari , sve automatski margine i padinge stavi na 0 */
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+/*ako mi se ne svida izgled slova promjeni lux roman'*/
+body.index {
+
+  font-family: 'Luxurious Roman';
+  background:url("../slike/pocetna.jpg"),no-repeat ;
+  background-size:absolute;
+  
+  }
+
+/* navigacijska traka */
+
+.navbar {
+  width: 100%;
+  padding: 0.6cm;
+  overflow: auto;
+  
+  
+  /*
+  background: linear-gradient(0deg, rgba(107,65,25,1) 1%, rgba(8,8,8,1) 44%, rgba(98,62,29,1) 100%); */
+  
+}
+
+/* linkovi u nav traci */
+.navbar a {
+  float: left;
+  padding: 15px;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-size: 25px;
+  width: 10%; 
+  text-align:center; 
+  font-style: italic;
+}
+
+
+  /*PROSVJETLI LINKOVE U NAVU KAD SE PRELAZI MISEM ----> UKRADENO OD NEKOG LIKA , NOT RLY STAVIO JE KOD ONLINE */
+  .navbar a{
+    cursor: pointer
+  }
+  a span{
+    transition: .5s linear
+  }
+  a:hover span:nth-child(1){
+    margin-right: 5px
+  }
+  a:hover span:nth-child(1):after{
+    content: "";
+  }
+  a:hover span:nth-child(2){
+    margin-left: 30px
+  }
+  a:hover span{
+    color: rgb(248, 248, 248);
+    text-shadow: 0 0 10px #fff,
+                 0 0 20px #fff, 
+                 0 0 40px #fff;
+  }
+
+
+
+
+a:hover{
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+  
+}
+
+
+
+/* mjenjanje boje prilikom prelaska misa */
+.navbar a:hover {
+  background: linear-gradient(to right, #c26b08, #ec9339,#f37f12, #f18100);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+
+}
+
+
+
+/*********             MENU STRANICA     *********/
+body.menu {
+  Background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url("../slike/menu_background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  
+}
+
+
+
+
+
+
+/*********             O NAMA STRANICA     *********/
+body.O_nama {
+  Background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url("../slike/header1.jpg");
+  background-size: absolute;
+}
+
+.O_nama p {
+  font-size: 25px;
+  color: #f6b464;
+  font-family: "Luxurious Roman";
+  width: 30cm;
+  height: 1.5cm;
+  padding:0.5mm;
+  margin: 0.5cm;
+  margin-left: 10cm;
+  
+}
+
+.O_nama h1{
+  font-family: "Luxurious Roman";
+  color: #eeeae5;
+  font-size: 50px;
+  height: 1.2cm;
+  margin: 1cm;
+  margin-left: 20cm;
+  }
+
+
+.O_nama h3{
+  font-family: "Luxurious Roman";
+  color: #eeeae5;
+  font-size: 20px;
+  height: 1.2cm;
+  margin: 1cm;
+  margin-left: 20cm;
+}
+
+
+
+
+
+
+.button-76 {
+  position: relative;
+  display: inline-block;
+  padding: 30px 61px;
+  border-radius: 4px;
+  color: #efb01c;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  margin: 25px;
+  font-family: "Roboto", sans-serif;
+  filter: hue-rotate(0deg);
+  border: 2px solid #efb01c;
+  transition: all 0.1s linear;
+}
+.button-76:hover {
+  border: 1px solid transparent;
+}
+.button-76:hover span {
+  position: absolute;
+  display: block;
+}
+.button-76:hover span:nth-child(1) {
+  filter: hue-rotate(0deg);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #efb01c);
+  animation: animate1 1s linear infinite;
+}
+@keyframes animate1 {
+  0% {
+    left: -100%;
+  }
+  50%, 100% {
+    left: 100%;
+  }
+}
+.button2:hover span:nth-child(2) {
+  filter: hue-rotate(60deg);
+  top: -100%;
+  right: 0;
+  width: 3px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #efb01c);
+  animation: animate2 1s linear infinite;
+  animation-delay: 0.25s;
+}
+@keyframes animate2 {
+  0% {
+    top: -100%;
+  }
+  50%, 100% {
+    top: 100%;
+  }
+}
+.button-76:hover span:nth-child(3) {
+  filter: hue-rotate(120deg);
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  background: linear-gradient(270deg, transparent, #efb01c);
+  animation: animate3 1s linear infinite;
+  animation-delay: 0.5s;
+}
+@keyframes animate3 {
+  0% {
+    right: -100%;
+    height: 3px;
+  }
+  50%, 100% {
+    height: 2px;
+    right: 100%;
+  }
+}
+.button-76:hover span:nth-child(4) {
+  filter: hue-rotate(300deg);
+  bottom: -100%;
+  left: 0;
+  width: 3px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #efb01c);
+  animation: animate4 1s linear infinite;
+  animation-delay: 0.75s;
+}
+@keyframes animate4 {
+  0% {
+    bottom: -100%;
+  }
+  50%, 100% {
+    bottom: 100%;
+  }
+}
+
+
+
+
+
+.button-76 {
+  background-color: #cf9024;
+  background-image: linear-gradient(to bottom right, #fcd34d, #ef4444, #ecc348);
+  border: 0;
+  border-radius: .25rem;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  font-family: ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 0.5;
+  padding: 1rem;
+  text-align: center;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  margin-left: 35%;
+
+}
+
+.button-76:hover {
+  box-shadow: none;
+}
+
+@media (min-width: 1024px) {
+  .button-76 {
+    font-size: 20px;
+    padding: 1rem 1.5rem;
+    line-height: 32px;
+  }
+}
+
+
+
+
+
+
+/*****************MENU*********************/
+
+
+/*postavi wrapper opcije  za slike u sredinu i marginu stavi na 100 ****/
+.wrapper {
+  width: 1200px;
+  margin: 100px auto;
+}
+
+
+.title {
+  margin-bottom: 60px;
+}
+
+.title h4 {
+  font-family: "Luxurious Roman";
+  font-size: 36px;
+  position: relative;
+  display: inline-block;
+  color: rgb(246, 181, 100);
+  
+}
+
+.title h4 span {
+  display: block;
+  font-size: 30px;
+  font-style: italic;
+  margin-bottom: -15px;
+  color: rgb(246, 181, 100);
+  padding: 50px;
+  
+
+
+}
+
+.title h3 {
+  font-size: 25px;
+  font-style: italic;
+  color: rgb(246, 181, 100);
+  padding-right: 50px;
+  text-align: center;
+
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+}
+
+
+.single-menu {
+  flex-basis: 580px;
+  margin-bottom: 40px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid rgb(246, 181, 100);
+}
+
+
+
+/***ukradeno s yt-a ,omogucuje mi da odabirem elemente po njegovom indexu */
+.single-menu:nth-child(5), .single-menu:nth-child(6){
+  border-bottom: 0;
+
+}
+
+
+
+/** sam da ih postavljam u redove , ok je  ne moram mjenjat kasnije , mozda center ---> postavi novac i opis kod sredine slike */
+.single-menu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.single-menu img {
+  max-width: 180px;
+  margin-right: 30px;
+  border-radius: 50%;
+  border: 1px solid rgb(246, 181, 100);
+  padding: 3px;
+
+
+
+}
+
+.single-menu h4 {
+  text-transform:capitalize;
+  font-size: 20px;
+  border-bottom: 1px dashed rgb(248, 219, 184); /* crta izmedu h4 i paragrampha --> meh nez ocu ostavit */
+  font-style: italic;
+  border-bottom: 1px dashed rgb(246, 181, 100);
+  margin-bottom: 1px dashed rgb(246, 181, 100);
+  padding-bottom: 5px;
+  font-style: italic;
+  color: rgb(246, 181, 100);
+
+}
+
+
+
+/**** Cijenu sam stavio na desno --> razlog kom-mozda stavit u sredinu ****/
+.single-menu h4 span {
+  float: right;
+  color: rgb(246, 181, 100);
+  font-style: italic;
+}
+
+
+.menu-content p {
+  color: rgb(246, 181, 100);
+  font-style: italic;
+  size: 30px;
+
+}
+
+
+.sekcija {
+  margin: auto;
+  padding: auto;
+  
+  
+}
+
+
+
+
+
+
+
+/****rezerviraj stol web page ****/
+
+.stol {
+  Background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url("../slike/rezerviraj.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container {
+  font-family: "Luxurious Roman";
+  margin: 10px;
+  padding: 10px;
+  font-size: 17px;
+  font-style: italic;
+  color: #f8f5f5;
+  
+
+}
+
+.row {
+  padding: 5px;
+  
+}
+
+.btn-success {
+  font-style: italic;
+  color: #f1f1f1;
+  margin: 20px;
+  background-color: #979b99;
+  border-color: #0b0c0c;
+}
+
+
+.btn-success:hover {
+  color: #fff;
+  background-color: #d3982a;
+  border-color: #a8690b;
+}
+
+.bg-light {
+
+background: rgb(233,163,96);
+background: linear-gradient(0deg, rgb(247, 169, 96) 4%, rgba(218,200,200,1) 43%, rgb(252, 176, 105) 99%);
+}
+
+
+/*********galerija html **************/
+
+.prvicarousel {
+  padding: 50px;
+  margin: 50px;
+  top: 0;
+  left: 0;
+  min-height: 200px;
+
+
+  font-style: italic;
+  color: #c26b08;
+  font-family: "Luxurious Roman";
+
+  
+}
+
+
+
+.galerija {
+  Background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url("../slike/galerija.jpg");
+}
+
+.carousel-item{
+  height: 500px;
+} 
+.carousel-item img{
+  height: 500px;
+}
+
+
+
+/****BOOTSTRAP CARDS U GALERIJI *************/
+
+
+.card-deck {
+  margin-left: 50px;
+  margin-right: 50px;
+
+  font-style: italic;
+  color: #c26b08;;
+  font-family: "Luxurious Roman";
+}
+
+.card-body {
+  background: linear-gradient(0deg, rgba(233,163,96,1) 4%, rgba(218,200,200,1) 43%, rgba(255,185,120,1) 99%);
+}
+
+.btn-primary {
+background-color: #bd6c37;
+border-color:white;
+}
+
+.btn-primary:hover {
+  color: #fff;
+  background-color: #d3982a;
+  border-color: #a8690b;
+
+}
+
+
+/************************ test--> video za index stranicu ******************/
+.video-container {
+  
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  
+  z-index: -2;
+  object-fit: cover;
+  position: fixed;
+  
+
+}
+
+.recenzijee {
+  display: table-row;
+}
+
+
+
+/***********************************************recenzije************************/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap');
+
+:root{
+    --golden : #c59d5f;
+
+}
+
+.menu-title{
+    margin-top: 3rem;
+}
+.menu-title  span{
+    font-size: 2rem;
+    font-weight: 700;
+    width: 10%;
+    color:#f6b464;;
+    border-bottom: 5px solid var(--golden);
+}
+.catagories ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    margin-top: 30px;
+}
+.catagories ul li {
+    margin: 10px;
+    padding: 5px 10px;
+    font-size: 1.5rem;
+    border: 2px solid var(--golden);
+    border-radius: 5px;
+    color: var(--golden)
+}
+.catagories ul li:hover{
+    background-color: var(--golden);
+    color: white;
+}
+/* content */
+.content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    
+}
+.content .c-image {
+    width: 1000px;
+    height: 160px;
+    border: 3px solid var(--golden);
+    border-radius: 5px;
+}
+.content .c-image img {
+    width: 100%;
+    height: 100%;
+}
+.content .t-n-p{
+    margin-left: 20px;
+    width: 1000px;
+}
+.content .t-n-p .header{
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px dotted #182433;
+  padding: 0px 5px;
+}
+.content .t-n-p .title {
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+.content .t-n-p .price {
+    font-size: 0.8rem;
+    font-weight: 800;
+    color: var(--golden);
+    word-spacing: 2px;
+}
+.content .t-n-p .des p{
+    font-size: 0.9rem;
+}
+
+
+.Precenzije {
+  background:url("../slike/rezerviraj.jpg"),no-repeat ;
+}
+
+
+/************test************/
+
+
+.to-top {
+  background: rgb(22, 21, 21);
+  position: fixed;
+  bottom: 16px;
+  right:32px;
+  width:50px;
+  height:50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size:32px;
+  color:#a8690b;;
+  text-decoration: none;
+  opacity:0;
+  pointer-events: none;
+  transition: all .4s;
+}
+
+.to-top.active {
+  bottom:32px;
+  pointer-events: auto;
+  opacity:1;
+}
+
+
+
+
+
+  
+
+  
